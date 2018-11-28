@@ -1,0 +1,15 @@
+<h2>Добавление нового поста</h2>
+<%= form_for :post, url: posts_path do |f| %>
+<p>
+называние<br>
+<%= f.text_field (:title,{:class => 'fonrm-control'}) %>
+</p>
+<p>
+Текст статьи<br>
+<%=f.text_field (:body, {:class => 'fonrm-control'})  %>
+</p>
+
+<p>
+  <%=f.sumbit({:class => 'btn btn-success'})  %>
+</p>
+<% end %>
